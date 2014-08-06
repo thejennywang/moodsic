@@ -11,7 +11,8 @@
       var url = "http://api.worldweatheronline.com/free/v1/weather.ashx?q=" + ip_address + "&format=json&num_of_days=1&date=today&includelocation=yes&key=42063e760fd51f59cd246ae00690eaa024a131de"
 
       $.get(url, function(data){
-      
+
+        console.log(url)
         var location = data.data.nearest_area[0].areaName[0].value
         var weatherDesc = data.data.current_condition[0].weatherDesc[0].value;
         var weatherImgUrl = data.data.current_condition[0].weatherIconUrl[0].value;
@@ -23,7 +24,7 @@
     
   </script>
   <section class='weather-container'></section>
-
+  <iframe src="https://embed.spotify.com/?uri=spotify:user:spotify:playlist:7MPXsjQGsXcLdNz7UxVuVl" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
 </body>
 </html>
 
