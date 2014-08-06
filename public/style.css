@@ -1,23 +1,23 @@
 body {
 	font-family: 'Helvetica Neue';
 	text-align: center;
-	margin-top: 6%;
+	margin-top: 0%;
+	color: white;
+	background-size:   cover;                    
+  background-repeat: no-repeat;
 }
 
 h1 {
-	color: white;
-	font-size: 100px;
+	font-size: 80px;
 	margin-bottom: 0%;
 }
 
 h2 {
-	color: white;
 	margin: 0%;
 }
 
 h3 {
-	color: white;
-	font-size: 100px;
+	font-size: 80px;
 	margin: 0%;
 }
 
