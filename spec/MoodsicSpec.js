@@ -7,7 +7,7 @@ describe("Moodsic", function() {
 		});
 
 		it('should return a playlist for snow', function() {
-			var weatherDesc = 'Patchy light snow in area with thunder';
+			var weatherDesc = 'Light snow';
 			expect(moodsic.returnPlaylistUrlFrom(weatherDesc)).toEqual(moodsic.MOODS.snow);
 		});
 	
