@@ -8,13 +8,14 @@
   <script type="text/javascript" src="http://l2.io/ip.js?var=ip_address"></script>
   <script>
     $(document).ready(function(){
-      var url = "http://api.worldweatheronline.com/free/v1/weather.ashx?q=" + ip_address + "&format=json&num_of_days=1&date=today&includelocation=no&key=42063e760fd51f59cd246ae00690eaa024a131de"
+      var url = "http://api.worldweatheronline.com/free/v1/weather.ashx?q=" + ip_address + "&format=json&num_of_days=1&date=today&includelocation=yes&key=42063e760fd51f59cd246ae00690eaa024a131de"
 
       $.get(url, function(data){
+        var location = data.data.nearest_area[0].areaName[0].value
         var weatherDesc = data.data.current_condition[0].weatherDesc[0].value;
         var weatherImgUrl = data.data.current_condition[0].weatherIconUrl[0].value;
 
-         $('<h1>' + weatherDesc + '</h1><img src=' + weatherImgUrl +'></img>').prependTo('.weather-container');
+         $('<h1>' + location + '</h1><h2>' + weatherDesc + '</h2><img src=' + weatherImgUrl +'></img>').prependTo('.weather-container');
  
       });
     });
