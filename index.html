@@ -3,6 +3,7 @@
 <head>
   <!-- http://www.geoplugin.net/json.gp?ip=37.157.35.154 -->
   <script src='https://code.jquery.com/jquery-2.0.3.min.js'></script>
+  <script src='lib/Moodsic.js'></script>
 </head>
 <body>
   <script type="text/javascript" src="http://l2.io/ip.js?var=ip_address"></script>
@@ -16,15 +17,21 @@
         var location = data.data.nearest_area[0].areaName[0].value
         var weatherDesc = data.data.current_condition[0].weatherDesc[0].value;
         var weatherImgUrl = data.data.current_condition[0].weatherIconUrl[0].value;
+        var moodsic = new Moodsic();
 
          $('<h1>' + location + '</h1><h2>' + weatherDesc + '</h2><img src=' + weatherImgUrl +'></img>').prependTo('.weather-container');
+
+         console.log(moodsic.returnPlaylistUrlFrom(weatherDesc));
+
+         $('<iframe src="https://embed.spotify.com/?uri=' + moodsic.returnPlaylistUrlFrom(weatherDesc) + '"width="300" height="380" frameborder="0" allowtransparency="true"></iframe>').appendTo('.spotify-player');
  
       });
     });
     
   </script>
   <section class='weather-container'></section>
-  <iframe src="https://embed.spotify.com/?uri=spotify:user:spotify:playlist:7MPXsjQGsXcLdNz7UxVuVl" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+  <section class='spotify-player'></section>
+  
 </body>
 </html>
 
