@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <!-- http://www.geoplugin.net/json.gp?ip=37.157.35.154 -->
   <script src='https://code.jquery.com/jquery-2.0.3.min.js'></script>
   <script src='lib/Moodsic.js'></script>
 </head>
@@ -19,9 +18,9 @@
         var weatherImgUrl = data.data.current_condition[0].weatherIconUrl[0].value;
         var moodsic = new Moodsic();
 
-         $('<h1>' + location + '</h1><h2>' + weatherDesc + '</h2>').prependTo('.weather-container');
+        $('body').css('background-image','url('+ moodsic.returnImageUrlFrom(weatherDesc) + ')');
 
-         console.log(moodsic.returnPlaylistUrlFrom(weatherDesc));
+         $('<h1>' + location + '</h1><h2>' + weatherDesc + '</h2>').prependTo('.weather-container');
 
          $('<iframe src="https://embed.spotify.com/?uri=' + moodsic.returnPlaylistUrlFrom(weatherDesc) + '&theme=white&view=coverart"width="300" height="380" frameborder="0" allowtransparency="true"></iframe>').appendTo('.spotify-player');
  
