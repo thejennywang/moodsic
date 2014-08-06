@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- http://www.geoplugin.net/json.gp?ip=37.157.35.154 -->
+  <script src='https://code.jquery.com/jquery-2.0.3.min.js'></script>
+</head>
+<body>
+  <script type="text/javascript" src="http://l2.io/ip.js?var=ip_address"></script>
+  <script>
+    $(document).ready(function(){
+      var url = "http://api.worldweatheronline.com/free/v1/weather.ashx?q=" + ip_address + "&format=json&num_of_days=1&date=today&includelocation=no&key=42063e760fd51f59cd246ae00690eaa024a131de"
+
+      $.get(url, function(data){
+        var weatherDesc = data.data.current_condition[0].weatherDesc[0].value;
+        var weatherImgUrl = data.data.current_condition[0].weatherIconUrl[0].value;
+
+         $('<h1>' + weatherDesc + '</h1><img src=' + weatherImgUrl +'></img>').prependTo('.weather-container');
+ 
+      });
+    });
+    
+  </script>
+  <section class='weather-container'></section>
+
+</body>
+</html>
+
