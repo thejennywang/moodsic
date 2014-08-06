@@ -1,0 +1,30 @@
+body {
+	font-family: 'Helvetica Neue';
+	text-align: center;
+	margin-top: 6%;
+}
+
+h1 {
+	color: white;
+	font-size: 100px;
+	margin-bottom: 0%;
+}
+
+h2 {
+	color: white;
+	margin: 0%;
+}
+
+h3 {
+	color: white;
+	font-size: 100px;
+	margin: 0%;
+}
+
+section {
+	margin: auto 0;
+}
+
+.spotify-player {
+	opacity: 0.7;
+}

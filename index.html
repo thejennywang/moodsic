@@ -3,6 +3,7 @@
 <head>
   <script src='https://code.jquery.com/jquery-2.0.3.min.js'></script>
   <script src='lib/Moodsic.js'></script>
+  <link rel='stylesheet' type='text/css' href='public/style.css'>
 </head>
 <body>
   <script type="text/javascript" src="http://l2.io/ip.js?var=ip_address"></script>
@@ -12,15 +13,16 @@
 
       $.get(url, function(data){
 
-        console.log(url)
+        console.log(data.data.current_condition[0].temp_C)
         var location = data.data.nearest_area[0].areaName[0].value
         var weatherDesc = data.data.current_condition[0].weatherDesc[0].value;
+        var tempC = data.data.current_condition[0].temp_C;
         var weatherImgUrl = data.data.current_condition[0].weatherIconUrl[0].value;
         var moodsic = new Moodsic();
 
         $('body').css('background-image','url('+ moodsic.returnImageUrlFrom(weatherDesc) + ')');
 
-         $('<h1>' + location + '</h1><h2>' + weatherDesc + '</h2>').prependTo('.weather-container');
+         $('<h1>' + location + '</h1><h2>' + weatherDesc + '</h2> <h3>' + tempC + '&deg</h3>').prependTo('.weather-container');
 
          $('<iframe src="https://embed.spotify.com/?uri=' + moodsic.returnPlaylistUrlFrom(weatherDesc) + '&theme=white&view=coverart"width="300" height="380" frameborder="0" allowtransparency="true"></iframe>').appendTo('.spotify-player');
  
