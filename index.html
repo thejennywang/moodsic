@@ -19,11 +19,11 @@
         var weatherImgUrl = data.data.current_condition[0].weatherIconUrl[0].value;
         var moodsic = new Moodsic();
 
-         $('<h1>' + location + '</h1><h2>' + weatherDesc + '</h2><img src=' + weatherImgUrl +'></img>').prependTo('.weather-container');
+         $('<h1>' + location + '</h1><h2>' + weatherDesc + '</h2>').prependTo('.weather-container');
 
          console.log(moodsic.returnPlaylistUrlFrom(weatherDesc));
 
-         $('<iframe src="https://embed.spotify.com/?uri=' + moodsic.returnPlaylistUrlFrom(weatherDesc) + '"width="300" height="380" frameborder="0" allowtransparency="true"></iframe>').appendTo('.spotify-player');
+         $('<iframe src="https://embed.spotify.com/?uri=' + moodsic.returnPlaylistUrlFrom(weatherDesc) + '&theme=white&view=coverart"width="300" height="380" frameborder="0" allowtransparency="true"></iframe>').appendTo('.spotify-player');
  
       });
     });
