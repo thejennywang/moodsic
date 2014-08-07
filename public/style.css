@@ -7,6 +7,30 @@ body {
   background-repeat: no-repeat;
 }
 
+.sunny {
+	background-image: url('images/sunny.jpg');
+}
+
+.cloudy {
+	background-image: url('images/cloudy.jpg');
+}
+
+.drizzle {
+	background-image: url('images/drizzle.jpg');
+}
+
+.other {
+	background-image: url('images/other.jpg');
+}
+
+.rain {
+	background-image: url('images/rain.jpg');
+}
+
+.snow {
+	background-image: url('images/snow.jpg');
+}
+
 h1 {
 	font-size: 80px;
 	margin-bottom: 0%;
@@ -26,5 +50,6 @@ section {
 }
 
 .spotify-player {
+	margin-top: 3%;
 	opacity: 0.7;
 }
