@@ -6,6 +6,7 @@ $(document).ready(function(){
 
     var moodsic = new Moodsic();
     var weatherDesc = data.data.current_condition[0].weatherDesc[0].value;
+    // var weatherDesc = 'Clear/sunny';
     
     var content = {
       area: data.data.nearest_area[0].areaName[0].value,
