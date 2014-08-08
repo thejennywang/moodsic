@@ -8,27 +8,27 @@ body {
 }
 
 .sunny {
-	background-image: url('images/sunny.jpg');
+	background-image: url('/images/sunny.jpg');
 }
 
 .cloudy {
-	background-image: url('images/cloudy.jpg');
+	background-image: url('/images/cloudy.jpg');
 }
 
 .drizzle {
-	background-image: url('images/drizzle.jpg');
+	background-image: url('/images/drizzle.jpg');
 }
 
 .other {
-	background-image: url('images/other.jpg');
+	background-image: url('/images/other.jpg');
 }
 
 .rain {
-	background-image: url('images/rain.jpg');
+	background-image: url('/images/rain.jpg');
 }
 
 .snow {
-	background-image: url('images/snow.jpg');
+	background-image: url('/images/snow.jpg');
 }
 
 h1 {
