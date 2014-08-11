@@ -14,7 +14,7 @@ Moodsic.prototype.MAPPING = {
 	snow: 		['ice', 'sleet', 'snow', 'blizzard'],
 	drizzle: 	['drizzle', 'fog', 'mist'],
 	cloudy: 	['overcast', 'cloudy'],
-	sunny: 		['clear/sunny']
+	sunny: 		['clear/sunny', 'clear']
 };
 
 Moodsic.prototype.CLASSES = {
