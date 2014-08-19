@@ -5,4 +5,4 @@ Makers Academy - Week 7 Project - Learning APIs, AJAX, and Javascript JavaScript
 
 [Moodsic](http://moodsic.herokuapp.com/) on Heroku
 
-![Moodsic](http://www.thealmightyjenny.com/wp-content/uploads/2014/08/Screen-Shot-2014-08-06-at-7.19.29-PM1.png)
+![Moodsic](http://www.thealmightyjenny.com/wp-content/uploads/2014/08/Screen-Shot-2014-08-19-at-10.49.07-AM.png)
